@@ -95,14 +95,14 @@ void *writer(void* id){
 
 ```
 **Semaphores Used:** 
-- finish : prevents 2 or more readers from executing exit section. 
-- writer_wait : if reader in critiacal section, waiting writer gets priority.  
-- allow : Prevents reader from entering white writer is wiriting and allows only one process at a time to excute the readers entry section.
+- `finish` : Prevents 2 or more readers from executing exit section. 
+- `writer_wait` : If reader in critiacal section, waiting writer gets priority.  
+- `allow` : Prevents reader from entering critical section while writer is writing and allows only one process at a time to excute the readers entry section.
 
 **Variables Used:** 
-
-**Reader Funtion:** 
-
-**Writers Function:** 
+-  DATA : Global shared data. 
+- `waitwriter` : If writer is waiting when reader is in critial section its true. Else its false. 
+- `popreader` : Total number of readers that have executed EXIT section. 
+- `allowreader` : Total number of readers that have executed ENTRY section. 
 
 
